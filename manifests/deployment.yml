@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: pcjoshiatseashopportal 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pcjoshiatseashopportal 
+    spec:
+      containers:
+        - name: pcjoshiatseashopportal 
+          image: rlincregistry.azurecr.io/pcjoshiatseashopportal
+          ports:
+          - containerPort: 80
